@@ -13,7 +13,7 @@ for article in soup_data.find_all("div", class_="article in_list span"):
             print(title.select_one('a').text)
 
         for summary in content.find_all("div", class_="summary"):
-            for br in summary.find_all("br")[1:3]:
+            for br in summary.find_all("br")[0:3]:
                 print(br.previousSibling)
         print('\n')
         
